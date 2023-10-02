@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CRUDS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+<div class="cruds">
+  
+  <div class="container">
+    <!-- <div class="switch d-flex">
+      dark Mode<span class="bttn ms-2"><span class="togglebtn"></span></span>
+    </div> -->
+    <div class="head my-4 ">
+      <h1>cruds</h1>
+      <p>product management system</p>
+    </div>
+    <div class="inputs">
+      <input type="text" placeholder="Title" id="title">
+      <div class="price">
+        <input onkeyup="getTotal()" type="number" placeholder="Price" id="price">
+        <input onkeyup="getTotal()" type="number" placeholder="Taxes" id="taxes">
+        <input onkeyup="getTotal()" type="number" placeholder="Ads" id="ads">
+        <input onkeyup="getTotal()" type="text" placeholder="Discount" id="discount">
+        <small id="total" class=" p-1" id="total"></small>
+      </div>
+      <input type="number" placeholder="Count" id="count">
+      <input type="text" placeholder="Category" id="category">
+      <button id="create" class="bttn w-100">Create</button>
+    </div>
+    <div class="outputs">
+      <input type="text" placeholder="Search" id="search" onkeyup="SearchData()">
+      <div class="search d-flex gap-2 justify-content-between">
+        <button id="titleBtn" class="bttn " onclick="search(this.id)">Search By Title</button>
+        <button id="categoryBtn" class="bttn " onclick="search(this.id)">Search By Category</button>
+      </div>
+      <div class="deleteAll w-100">
+        <button onclick="dis2()" class="bttn w-100" id="all">Delete All (<span id="deleteAll"></span>)</button>
+      </div>
+      <div class="table-responsive ">
+        <table class="w-100 my-2 table-borderless">
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>tasxs</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody">
+          
+          </tbody>
+        </table>
+    </div>
+    </div>
+  </div>
+  <div class="sure">
+    <div class="message">
+      Are You Sure To Delete?
+      <div class="button">
+        <button class="bttn dele" id ="deletitem"onclick="deleteData()">Delete</button>
+      <button class="bttn cancel" onclick="cancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
